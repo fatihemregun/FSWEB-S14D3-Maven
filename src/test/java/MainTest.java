@@ -41,9 +41,9 @@ public class MainTest {
         holden = new Holden(4, "Holden");
         ford = new Ford(4, "Ford");
         carSkeleton = new CarSkeleton("Test", "test");
-        electricCar = new ElectricCar("Test", "test", 10, 5);
-        gasPoweredCar = new GasPoweredCar("Test", "test", 10, 4);
-        hybridCar = new HybridCar("Test", "test", 10, 5, 4);
+        electricCar = new ElectricCar(10.0, 5);
+        gasPoweredCar = new GasPoweredCar(10.0, 4);
+        hybridCar = new HybridCar(10.0, 5, 4);
     }
 
     @DisplayName("Car sınıf değişkenleri doğru access modifier değerlerine sahip mi ?")
@@ -128,7 +128,7 @@ public class MainTest {
         assertThat(electricCar.getName(), instanceOf(String.class));
         assertThat(electricCar.getDescription(), instanceOf(String.class));
         assertThat(electricCar.getBatterySize(), instanceOf(Integer.class));
-        assertThat(electricCar.getAvgKmPerCharge(), instanceOf(Double.class));
+        assertThat(electricCar.getAvgKmPerLiter(), instanceOf(Double.class));
     }
 
     @DisplayName("GasPoweredCar sınıf değişkenleri doğru type değerlerine sahip mi ?")
@@ -136,7 +136,7 @@ public class MainTest {
     public void testGasPoweredCar() throws NoSuchMethodException {
         assertThat(gasPoweredCar.getName(), instanceOf(String.class));
         assertThat(gasPoweredCar.getDescription(), instanceOf(String.class));
-        assertThat(gasPoweredCar.getAverageKmPerLiter(), instanceOf(Double.class));
+        assertThat(gasPoweredCar.getAvgKmPerLiter(), instanceOf(Double.class));
         assertThat(gasPoweredCar.getCylinders(), instanceOf(Integer.class));
     }
 
