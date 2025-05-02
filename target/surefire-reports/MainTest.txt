@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: MainTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 1.476 s <<< FAILURE! - in MainTest
+testHybridCar  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: an instance of java.lang.String
+     but: null
+	at MainTest.testHybridCar(MainTest.java:146)
+
+testBrake  Time elapsed: 0.002 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <the car is accelerating> but was: <the car is braking>
+	at MainTest.testBrake(MainTest.java:96)
+
+testGasPoweredCar  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: an instance of java.lang.String
+     but: null
+	at MainTest.testGasPoweredCar(MainTest.java:137)
+
+testElectricCar  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: an instance of java.lang.String
+     but: null
+	at MainTest.testElectricCar(MainTest.java:128)
+
